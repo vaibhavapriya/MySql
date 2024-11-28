@@ -32,10 +32,10 @@
     INSERT INTO products (name, price, description) VALUES
     ('Apple iMAC', 245000, 'apply is very good system'),
     ('imac book big', 290000, 'big mac book'),
-    ('Dell laptop new', 45000, 'its very new condition laptop'),
+    ('Dell laptop new', 15000, 'its very new condition laptop'),
     ('oppo f1s', 25000, 'oppo, mobile'),
     ('Samsung Galaxy', 55000, 'Samsung mobile phone'),
-    ('Sony Headphones', 15000, 'High-quality headphones'),
+    ('Product C', 15000, 'High-quality headphones'),
     ('Product A', 12000, 'Multifunctional printer');
     
     INSERT INTO orders (customer_id, order_date, total_price) VALUES
@@ -48,7 +48,7 @@
     
     UPDATE products
     SET price = 45000
-    WHERE name = 'Dell Laptop New';
+    WHERE name = 'Product C';
     
     ALTER TABLE products
     ADD COLUMN discount INT UNSIGNED DEFAULT 0;
