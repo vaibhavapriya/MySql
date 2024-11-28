@@ -5,7 +5,7 @@ for ecommerce page
 
 This project involves creating a database to manage a simple e-commerce system. The system consists of three tables: customers, orders, and products. The database is designed to track customer information, order details, and product information, with functionality to retrieve specific queries as described below.
 
-[SQL VIEW](https://www.db-fiddle.com/f/3vgGa5HgxpTcQPMrkTVGjj/1)
+[MySQL Page](https://www.db-fiddle.com/f/3vgGa5HgxpTcQPMrkTVGjj/1)
 
 ## Database Structure
 
