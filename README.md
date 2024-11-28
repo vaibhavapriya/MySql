@@ -170,8 +170,25 @@ SELECT *
 FROM orders
 WHERE total_price > 150.00;
 ```
+### 9. Normalize the database by creating a separate table for order items and updating the orders table to reference the order_items table.
+```sql
+CREATE TABLE order_items (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  order_id INT UNSIGNED NOT NULL,
+  product_id INT UNSIGNED NOT NULL,
+  quantity INT UNSIGNED DEFAULT 1,
+  price INT UNSIGNED,
+  CONSTRAINT FK_order FOREIGN KEY (order_id) REFERENCES orders(id),
+  CONSTRAINT FK_product FOREIGN KEY (product_id) REFERENCES products(id)
+    );
+INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
+  (1001, 101, 1, 245000),
+  (1002, 102, 1, 290000),  
+  (1003, 103, 2, 45000),   
+  (1004, 107, 1, 55000);
+```
 
-### 9. Retrieve the average total of all orders
+### 10. Retrieve the average total of all orders
 ```sql
 SELECT AVG(total_price) AS average_order_price
 FROM orders;
